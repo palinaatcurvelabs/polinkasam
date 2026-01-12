@@ -1,0 +1,257 @@
+/* Minimal elegant design with subtle paper texture on black */
+:root {
+    --bg-black: #0a0a0a;
+    --text-white: #f5f5f5;
+    --text-grey: #999;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg-black);
+    color: var(--text-white);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Subtle paper texture */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            rgba(255, 255, 255, 0.01) 3px,
+            rgba(255, 255, 255, 0.01) 4px
+        );
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* Header */
+header {
+    position: relative;
+    z-index: 10;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    margin-bottom: 2rem;
+    color: var(--text-white);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.nav-link {
+    color: var(--text-grey);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--text-white);
+}
+
+/* Main */
+main {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: var(--text-white);
+    text-align: center;
+}
+
+/* What I Write - Blog */
+.blog-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.blog-entry {
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.blog-entry:last-child {
+    border-bottom: none;
+}
+
+.blog-entry h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--text-grey);
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.content {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-white);
+    font-weight: 300;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+/* What I Read - Simple reading list */
+.reading-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.reading-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.reading-item:last-child {
+    border-bottom: none;
+}
+
+.reading-item h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.reading-item p {
+    font-size: 0.95rem;
+    color: var(--text-grey);
+    line-height: 1.7;
+}
+
+/* What I See - Photo sections */
+.photo-section {
+    margin-bottom: 5rem;
+}
+
+.photo-section:last-child {
+    margin-bottom: 0;
+}
+
+.photo-section h3 {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-grey);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.photo-item {
+    aspect-ratio: 1;
+    background: rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-grey);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    transition: background 0.3s;
+}
+
+.photo-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    z-index: 10;
+    margin-top: 6rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 4px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
