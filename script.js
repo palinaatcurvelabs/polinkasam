@@ -37,16 +37,25 @@ async function loadBlogEntries() {
 
         for (const entry of entries) {
             const article = document.createElement('article');
-            article.className = 'blog-entry';
+            article.className = 'blog-entry collapsed';
 
             const contentResponse = await fetch(`writings/${entry.file}`);
             const content = await contentResponse.text();
 
             article.innerHTML = `
-                <h3>${entry.title}</h3>
-                ${entry.date ? `<div class="date">${entry.date}</div>` : ''}
-                <div class="content">${parseMarkdown(content)}</div>
+                <div class="blog-header">
+                    <h3>${entry.title}</h3>
+                    ${entry.date ? `<div class="date">${entry.date}</div>` : ''}
+                </div>
+                <div class="content" style="display: none;">${parseMarkdown(content)}</div>
             `;
+
+            article.querySelector('.blog-header').addEventListener('click', () => {
+                const contentDiv = article.querySelector('.content');
+                const isVisible = contentDiv.style.display !== 'none';
+                contentDiv.style.display = isVisible ? 'none' : 'block';
+                article.classList.toggle('collapsed');
+            });
 
             blogContainer.appendChild(article);
         }
