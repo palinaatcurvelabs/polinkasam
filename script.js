@@ -54,7 +54,7 @@ async function loadBlogEntries() {
 
             // Make the entire article clickable
             article.addEventListener('click', () => {
-                window.location.href = `post.html?post=${entry.slug}`;
+                window.location.href = `${entry.slug}.html`;
             });
 
             blogContainer.appendChild(article);
