@@ -37,24 +37,24 @@ async function loadBlogEntries() {
 
         for (const entry of entries) {
             const article = document.createElement('article');
-            article.className = 'blog-entry collapsed';
+            article.className = 'blog-entry';
+            article.style.cursor = 'pointer';
 
+            // Get first paragraph of content as preview
             const contentResponse = await fetch(`writings/${entry.file}`);
             const content = await contentResponse.text();
+            const preview = content.split('\n\n')[1] || content.split('\n\n')[0] || '';
+            const previewText = preview.substring(0, 200) + (preview.length > 200 ? '...' : '');
 
             article.innerHTML = `
-                <div class="blog-header">
-                    <h3>${entry.title}</h3>
-                    ${entry.date ? `<div class="date">${entry.date}</div>` : ''}
-                </div>
-                <div class="content" style="display: none;">${parseMarkdown(content)}</div>
+                <h3>${entry.title}</h3>
+                ${entry.date ? `<div class="date">${entry.date}</div>` : ''}
+                <div class="preview">${previewText}</div>
             `;
 
-            article.querySelector('.blog-header').addEventListener('click', () => {
-                const contentDiv = article.querySelector('.content');
-                const isVisible = contentDiv.style.display !== 'none';
-                contentDiv.style.display = isVisible ? 'none' : 'block';
-                article.classList.toggle('collapsed');
+            // Make the entire article clickable
+            article.addEventListener('click', () => {
+                window.location.href = `post.html?post=${entry.slug}`;
             });
 
             blogContainer.appendChild(article);

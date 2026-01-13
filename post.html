@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">polinkasam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">polinkasam</a></h1>
+        <nav>
+            <a href="index.html#write" class="nav-link">what i write</a>
+            <a href="index.html#read" class="nav-link">what i read</a>
+            <a href="index.html#see" class="nav-link">what i see</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section active">
+            <div class="post-container">
+                <a href="index.html#write" class="back-link">← back to writings</a>
+                <article class="blog-post" id="blog-post">
+                    <h2 id="post-title">Loading...</h2>
+                    <div class="date" id="post-date"></div>
+                    <div class="content" id="post-content">
+                        <p>Loading content...</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="post.js?v=6"></script>
+</body>
+</html>

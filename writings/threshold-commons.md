@@ -4,6 +4,8 @@ A speculative project
 ## I.
 The building had been a wholesale flower market until 2031. You could still smell it if you arrived early enough—something vegetal and sweet trapped in the iron lattice of the roof, released by the morning humidity. The structure was a single vast hall, its walls mostly glass, its ceiling a grid of skylights now partly covered by solar cloth that rippled in wind like the surface of a lake seen from below.
 
+<img src="images/blog/01lindastegen_Vast_industrial_flower_market_hall_converted_into_a_e0781385-e82d-46e0-9a33-eb908b217867.png" alt="The Commons - converted flower market hall">
+
 They called it the Commons. Eighteen initiatives operated there, each with its own section of floor space but no walls between them. Fertility extension. Organ printing. Neural lace calibration. Metabolic reset protocols. And us—Threshold, the placeholder project.
 
 Our section was near the loading docks. This was intentional. When a new patient arrived—still on ice, transferred from the standby facility where the perfusion had happened—they came through those doors. It felt right that we'd be the first thing they passed on the way to long-term storage. Even if they couldn't see us. Even if they couldn't see anything.
@@ -12,6 +14,8 @@ Our section was near the loading docks. This was intentional. When a new patient
 Irem was the chemist. Not by original training—she'd done her doctorate in something to do with polymer memory, materials that could retain information in their molecular structure. Then she'd drifted, as everyone at the Commons had drifted, toward the question that organized all our work: what does it mean to persist?
 
 The paints were her project. I didn't understand the chemistry, but I understood the principle. Each suspension patient would receive a mark—a band of color applied to the forehead before cooling, a pigment engineered to survive centuries at cryogenic temperatures without fading or migrating. The color was unique. It corresponded to nothing—not to a database entry, not to a file number. Just a hue that belonged to that body and no other.
+
+<img src="images/blog/02lindastegen_Close-up_of_natural_pigment_to_synthetic_skin_sampl_e8ee7ad6-7190-4c8c-93fb-eca0e37ae320.png" alt="Natural pigment samples on synthetic skin">
 
 "Why natural?" I'd asked her once, watching her test a new batch on a slide of synthetic skin.
 
@@ -32,6 +36,8 @@ The Director's name was Yuki Sørensen. She'd founded the Commons twelve years a
 I didn't fully agree with her.
 
 It wasn't any single thing. It was the aggregate. The way she talked about the project as if it were already history—"when we look back," she'd say, "when this is normal." The way she framed persistence as an unqualified good, as if the desire to continue were self-evidently correct and the only question was technical. The way she never seemed to wonder whether the Thresholds might be a kind of violence—a representation imposed on someone who couldn't consent to its specific shape, who'd wake up (if they woke up) to find a version of themselves had been speaking in their name for decades.
+
+<img src="images/blog/03lindastegen_A_human_body_laying_on_the_display_with_a_smear_o_7f71530b-7932-470e-b5bb-f1ee98cf0008_1.png" alt="Patient in suspension with color marking">
 
 But I stayed. Because the alternative was to leave the work to people who didn't have those doubts.
 
@@ -64,6 +70,8 @@ The ethics. Are we helping people persist, or are we building cages made of thei
 
 ## VIII.
 The loading dock doors opened at 4 AM last Tuesday. New patient. I wasn't on intake, but I couldn't sleep, so I walked over to watch.
+
+<img src="images/blog/04lindastegen_Industrial_loading_dock_of_a_converted_market_build_9e8f6e0d-f1d3-4b0d-899b-8fe9c3b188a7.png" alt="Loading dock at the Commons">
 
 The transport pod was standard—white composite, condensation on the surface from the dry ice. Two technicians unloaded it onto a gurney. Irem was there with her kit. She opened the viewing panel, consulted her tablet, and selected a color.
 
