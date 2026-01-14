@@ -6,12 +6,22 @@ function getPostSlug() {
 
 // Use marked.js for markdown parsing
 function parseMarkdown(text) {
-    // Configure marked to allow HTML
+    // Configure marked with custom renderer to preserve HTML
+    const renderer = new marked.Renderer();
+
+    // Override html method to preserve raw HTML
+    renderer.html = function(html) {
+        return html;
+    };
+
     marked.setOptions({
+        renderer: renderer,
         breaks: true,
-        gfm: true
+        gfm: true,
+        pedantic: false
     });
 
+    // Parse markdown
     return marked.parse(text);
 }
 
