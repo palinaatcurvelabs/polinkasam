@@ -200,6 +200,19 @@ h2 {
 }
 
 /* About Section */
+.about-hero-image {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
 .about-content {
     max-width: 700px;
     margin: 0 auto;
