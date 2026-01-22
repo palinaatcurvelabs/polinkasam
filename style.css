@@ -48,8 +48,9 @@ header {
     padding: 2rem 4rem;
     border-bottom: 1px solid var(--border);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 h1 {
